@@ -6,7 +6,7 @@ import App from '../../ui/App.jsx';
 import CrudPedido from '../../ui/CrudPedido.jsx';
 import CrudFuncionario from '../../ui/CrudFuncionario.jsx';
 import CrudItem from '../../ui/CrudItem.jsx';
-
+import CrudFinanca from '../../ui/CrudFinanca.jsx';
 
 
 const browserHistory = createBrowserHistory();
@@ -17,6 +17,7 @@ export const renderRoutes = () => (
       <Route exact path="/pedido" component={CrudPedido}/>
       <Route exact path="/funcionario" component={CrudFuncionario}/>
       <Route exact path="/item" component={CrudItem}/>
+      <Route exact path="/financa" component={CrudFinanca}/>
     </div>
   </Router>
 );
