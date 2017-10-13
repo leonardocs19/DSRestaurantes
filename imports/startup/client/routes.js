@@ -5,6 +5,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import App from '../../ui/App.jsx';
 import CrudPedido from '../../ui/CrudPedido.jsx';
 import CrudFuncionario from '../../ui/CrudFuncionario.jsx';
+import CrudItem from '../../ui/CrudItem.jsx';
 
 
 
