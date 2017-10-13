@@ -18,8 +18,12 @@ export default class Funcionario extends Component {
           <span className="glyphicon glyphicon-remove"></span>
         </button>
         <br/>
-        <p> {this.props.funcionario.nome} </p>
-        <em>R$ {this.props.funcionario.cargo} </em>
+        <p>Nome: {this.props.funcionario.nome} </p>
+        <p>Idade: {this.props.funcionario.idade} </p>
+        <p>RG: {this.props.funcionario.RG} </p>
+        <p>CPF: {this.props.funcionario.CPF} </p>
+        <p>Cargo: {this.props.funcionario.cargo} </p>
+        <p>Salário: {this.props.funcionario.salario} </p>
       </li>
     );
   }
