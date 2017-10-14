@@ -49,7 +49,7 @@ class CrudFinanca extends Component {
             <input className="form-control" type="text" ref="textInput2" placeholder="Valor"/>
             <input className="form-control" type="text" ref="textInput3" placeholder="Data"/>
             <input className="form-control" type="text" ref="textInput4" placeholder="Tipo (Receita ou Despesa)"/>
-            <input className="btn btn-primary btn-block" type="submit" value="Add" />
+            <input className="btn btn-primary btn-block" type="submit" value="Adicionar Finança" />
           </form>
           <h3>Todos as Finanças</h3>
           <ul className="list-group">

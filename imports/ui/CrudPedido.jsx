@@ -81,7 +81,7 @@ class CrudPedido extends Component {
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
-            <input className="btn btn-primary btn-block" type="submit" value="Add" />
+            <input className="btn btn-primary btn-block" type="submit" value="Adicionar Pedido" />
           </form>
           <h3>Todos pedidos</h3>
           <ul className="list-group">

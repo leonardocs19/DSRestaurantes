@@ -59,7 +59,7 @@ class CrudFuncionario extends Component {
             <input className="form-control" type="text" ref="textInput4" placeholder="Salario"/>
             <input className="form-control" type="text" ref="textInput5" placeholder="RG"/>
             <input className="form-control" type="text" ref="textInput6" placeholder="CPF"/>
-            <input className="btn btn-primary btn-block" type="submit" value="Add" />
+            <input className="btn btn-primary btn-block" type="submit" value="Adicionar Funcionário" />
           </form>
           <h3>Todos os funcionarios</h3>
           <ul className="list-group">

@@ -56,7 +56,7 @@ class CrudItem extends Component {
             <input className="form-control" type="text" ref="textInput3" placeholder="Data da compra"/>
             <input className="form-control" type="text" ref="textInput4" placeholder="Data do vencimento"/>
             <input className="form-control" type="text" ref="textInput5" placeholder="Estoque minimo"/>
-            <input className="btn btn-primary btn-block" type="submit" value="Add" />
+            <input className="btn btn-primary btn-block" type="submit" value="Adicionar Item ao Estoque" />
           </form>
           <h3>Todos os itens</h3>
           <ul className="list-group">

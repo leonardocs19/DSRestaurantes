@@ -5,26 +5,17 @@ export default class App extends Component {
     return (
       <div className="container-fluid">
         <header>
-          <h1>Daran Serveur</h1>
+          <h1>Menu Principal - DS Restaurantes</h1>
         </header>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Novo Pedido</a>
+        <a className="btn-lg btn-block btn btn-default" href="http://localhost:3000/pedido" role="button">Novo Pedido</a>
         <a className="btn-lg btn-block btn btn-default" href="" role="button">Ver Mesas</a>
         <a className="btn-lg btn-block btn btn-default" href="" role="button">Fila de Pedidos</a>
         <br/>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Criar Item</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Editar Item</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Visualizar Item</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Excluir Item</a>
+        <a className="btn-lg btn-block btn btn-default" href="http://localhost:3000/item" role="button">Acessar Gerenciador de Estoque</a>
         <br/>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Criar Receita - Despesa</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Editar Receita - Despesa</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Visualizar Receita - Despesa</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Excluir Receita - Despesa</a>
+        <a className="btn-lg btn-block btn btn-default" href="http://localhost:3000/financa" role="button">Acessar Gerenciador de Finanças</a>
         <br/>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Criar Funcionário</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Editar Funcionário</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Visulizar Funcionário</a>
-        <a className="btn-lg btn-block btn btn-default" href="" role="button">Excluir Funcionário</a>
+        <a className="btn-lg btn-block btn btn-default" href="http://localhost:3000/funcionario" role="button">Acessar Gerenciador de Funcionários</a>
       </div>
     )
   }
