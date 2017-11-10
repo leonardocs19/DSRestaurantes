@@ -24,6 +24,7 @@ export default class Funcionario extends Component {
         <p>CPF: {this.props.funcionario.CPF} </p>
         <p>Cargo: {this.props.funcionario.cargo} </p>
         <p>Salário: {this.props.funcionario.salario} </p>
+        <p>E-Mail: {this.props.funcionario.Email} </p>
       </li>
     );
   }

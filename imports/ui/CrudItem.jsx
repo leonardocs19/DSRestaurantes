@@ -53,7 +53,7 @@ class CrudItem extends Component {
           <form onSubmit={this.handleSubmit.bind(this)}> 
             <input className="form-control" type="text" ref="textInput" placeholder="Nome"/>
             <input className="form-control" type="text" ref="textInput2" placeholder="Quantidade"/>
-            <input className="form-control" type="text" ref="textInput3" placeholder="Data da compra"/>
+            <input className="form-control" type="text" ref="textInput3" placeholder="Data da compra - DD/MM/AAAA"/>
             <input className="form-control" type="text" ref="textInput4" placeholder="Data do vencimento"/>
             <input className="form-control" type="text" ref="textInput5" placeholder="Estoque minimo"/>
             <input className="btn btn-primary btn-block" type="submit" value="Adicionar Item ao Estoque" />
