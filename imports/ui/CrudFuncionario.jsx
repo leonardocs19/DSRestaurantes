@@ -128,10 +128,11 @@ class CrudFuncionario extends Component {
     return (
       <div className="container-fluid">
         <header>
-          <h1>Funcionário</h1>
+          <h1>Funcionário <a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/funcionario/ajuda" role="button">Ajuda</a></h1>
         </header>
         <div className="form-group">
           <form onSubmit={this.handleSubmit.bind(this)}> 
+            <br/>
             <input className="form-control" type="text" ref="textInput" placeholder="Nome *"/>
             {displayErrorNome}
             <input className="form-control" type="number" ref="textInput2" placeholder="Idade *"/>
@@ -144,6 +145,8 @@ class CrudFuncionario extends Component {
             {displayErrorCpf}
             <input className="form-control" type="email" ref="textInput7" placeholder="E-Mail"/>
             <input className="btn btn-primary btn-block" type="submit" value="Adicionar Funcionário" />
+            <br/>
+            <p>Os campos com ' * ' são obrigatórios</p>
           </form>
           <h3>Todos os funcionários</h3>
           <ul className="list-group">
