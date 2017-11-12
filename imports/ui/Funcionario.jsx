@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { Funcionarios } from '../api/funcionarios.js';
 
+// Ver Modal
+
 
 export default class Funcionario extends Component {
 
@@ -14,7 +16,8 @@ export default class Funcionario extends Component {
     return (
       <li className="list-group-item">
         <b>{this.props.funcionario.nome}</b>
-        <button className="btn btn-default btn-margin delete" onClick={this.deleteThisFuncionario.bind(this)}>
+
+        <button className="btn btn-danger btn-margin delete" onClick={this.deleteThisFuncionario.bind(this)}>
           <span className="glyphicon glyphicon-remove"></span>
         </button>
         <br/>

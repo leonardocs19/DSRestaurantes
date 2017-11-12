@@ -128,7 +128,8 @@ class CrudFuncionario extends Component {
     return (
       <div className="container-fluid">
         <header>
-          <h1>Funcionário <a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/funcionario/ajuda" role="button">Ajuda</a></h1>
+          <h1>Funcionário <a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/funcionario/ajuda" role="button">
+            <span className="glyphicon glyphicon-info-sign"></span> Ajuda</a></h1>
         </header>
         <div className="form-group">
           <form onSubmit={this.handleSubmit.bind(this)}> 
