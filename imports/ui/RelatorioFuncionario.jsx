@@ -26,7 +26,8 @@ class RelatorioFuncionario extends Component {
     return (
       <div className="container-fluid">
         <header>
-          <h1>Relatório Funcionários </h1>
+          <h1>Relatório Funcionários <button className="btn btn-default btn-margin delete" onClick={this.imprimir}><span className="glyphicon glyphicon-print"></span> Imprimir
+        </button></h1>
         </header>
         <div className="form-group">
           <table class="table">
