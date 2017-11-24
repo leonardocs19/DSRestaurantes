@@ -60,9 +60,20 @@ class CrudItem extends Component {
             <input className="btn btn-primary btn-block" type="submit" value="Adicionar Item ao Estoque" />
           </form>
           <h3>Todos os itens</h3>
-          <ul className="list-group">
+         <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Quantidade</th>
+              <th>Data daCompra</th>
+              <th>Data do Vencimento</th>
+              <th>Estoque Minimo</th>
+              </tr>
+          </thead>
+          <tbody>
             {this.renderItens()}
-          </ul>
+          </tbody>
+          </table>
         </div>
         <div className="navbar navbar-fixed-bottom">
           <button className="btn btn-success btn-block btn-lg" onClick={this.handleSubmit}>Finalizar</button>

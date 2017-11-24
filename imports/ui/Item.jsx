@@ -6,24 +6,24 @@ import { Itens } from '../api/itens.js';
 export default class Item extends Component {
 
   deleteThisItem() {
-    Itens.remove(this.props.item._id);
+    if (confirm ("Tem certeza que deseja excluir este item?")) 
+      Itens.remove(this.props.item._id);
   }
 
   render() {
 
     return (
-      <li className="list-group-item">
-        <b>{this.props.item.nome}</b>
-        <button className="btn btn-default btn-margin delete" onClick={this.deleteThisItem.bind(this)}>
-          <span className="glyphicon glyphicon-remove"></span>
-        </button>
-        <br/>
-        <p>Nome: {this.props.item.nome} </p>
-        <p>Quantidade: {this.props.item.quantidade} </p>
-        <p>Data de vencimento: {this.props.item.dataVencimento} </p>
-        <p>Data da compra: {this.props.item.dataCompra} </p>
-        <p>Estoque mínimo: {this.props.item.estoqueMinimo} </p>
-      </li>
+        <tr>
+        <td>{this.props.item.nome}</td>
+        <td>{this.props.item.quantidade}</td>
+        <td>{this.props.item.dataVencimento}</td>
+        <td>{this.props.item.dataCompra}</td>
+        <td>{this.props.item.estoqueMinimo}</td>
+        <td><button className="btn btn-danger btn-margin delete" onClick={this.deleteThisItem.bind(this)}>
+        <span className="glyphicon glyphicon-remove"></span>
+        </button></td>
+        </tr>
     );
   }
 }
+
