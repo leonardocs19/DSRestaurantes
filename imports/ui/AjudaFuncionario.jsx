@@ -18,12 +18,17 @@ export default class App extends Component {
 
         <div class="panel panel-info">
           <div class="panel-heading">Para exclusão de funcionários:</div>
-          <div class="panel-body"><p>Clique no botão X ao lado do nome do funcionário para realizar uma exclusão</p></div>
+          <div class="panel-body"><p>Clique no botão <span className="glyphicon glyphicon-remove"></span> ao lado do nome do funcionário para realizar uma exclusão</p></div>
         </div>
 
         <div class="panel panel-info">
           <div class="panel-heading">Para visualização de funcionários:</div>
           <div class="panel-body"><p>Os funcionários cadastrados são visualizados logo abaixo da tela de cadastro</p></div>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">Para visualização do relatório de funcionário:</div>
+          <div class="panel-body"><p>Clique no botão <span className="glyphicon glyphicon-list-alt"></span> para ver o relátório de funcionários</p></div>
         </div>
 
         <a className="btn btn-primary btn-md" href="http://localhost:3000/funcionario" role="button">Voltar</a>

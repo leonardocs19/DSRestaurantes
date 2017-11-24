@@ -47,7 +47,7 @@ class CrudItem extends Component {
     return (
       <div className="container-fluid">
         <header>
-          <h1>Estoque<a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/item/ajuda" role="button">
+          <h1>Estoque <a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/item/ajuda" role="button">
             <span className="glyphicon glyphicon-info-sign"></span> Ajuda</a></h1>
         </header>
         <div className="form-group">

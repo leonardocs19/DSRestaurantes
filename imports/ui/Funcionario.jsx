@@ -8,27 +8,25 @@ import { Funcionarios } from '../api/funcionarios.js';
 export default class Funcionario extends Component {
 
   deleteThisFuncionario() {
-    Funcionarios.remove(this.props.funcionario._id);
+    if (confirm("Tem certeza que deseja excluir o funcionário selecionado?"))
+      Funcionarios.remove(this.props.funcionario._id);
   }
 
   render() {
 
     return (
-      <li className="list-group-item">
-        <b>{this.props.funcionario.nome}</b>
-
-        <button className="btn btn-danger btn-margin delete" onClick={this.deleteThisFuncionario.bind(this)}>
+      <tr>
+        <td>{this.props.funcionario.nome}</td>
+        <td>{this.props.funcionario.idade}</td>
+        <td>{this.props.funcionario.RG}</td>
+        <td>{this.props.funcionario.CPF}</td>
+        <td>{this.props.funcionario.Email}</td>
+        <td>{this.props.funcionario.cargo}</td>
+        <td>{this.props.funcionario.salario}</td>
+        <td><button className="btn btn-danger btn-margin delete" onClick={this.deleteThisFuncionario.bind(this)}>
           <span className="glyphicon glyphicon-remove"></span>
-        </button>
-        <br/>
-        <p>Nome: {this.props.funcionario.nome} </p>
-        <p>Idade: {this.props.funcionario.idade} </p>
-        <p>RG: {this.props.funcionario.RG} </p>
-        <p>CPF: {this.props.funcionario.CPF} </p>
-        <p>Cargo: {this.props.funcionario.cargo} </p>
-        <p>Salário: {this.props.funcionario.salario} </p>
-        <p>E-Mail: {this.props.funcionario.Email} </p>
-      </li>
+        </button></td>
+      </tr>
     );
   }
 }

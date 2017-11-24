@@ -6,6 +6,7 @@ import { Funcionarios } from '../api/funcionarios.js';
 
 import Funcionario from './Funcionario.jsx'
 
+
 class CrudFuncionario extends Component {
  
   constructor(props) {
@@ -109,6 +110,13 @@ class CrudFuncionario extends Component {
 
       this.setState({aux: false});
 
+      $.notify({
+        icon: 'glyphicon glyphicon-star',
+        message: "Funcionário adicionado!"
+      },{
+        type: 'success'
+      });
+
     }
   }
 
@@ -149,15 +157,28 @@ class CrudFuncionario extends Component {
             <br/>
             <p>Os campos com ' * ' são obrigatórios</p>
           </form>
-          <h3>Todos os funcionários</h3>
-          <ul className="list-group">
+          <h3>Todos os funcionários <a className="btn-lg btn-md btn btn-primary" href="http://localhost:3000/funcionario/relatorio" role="button">
+            <span className="glyphicon glyphicon-list-alt"></span> Relatório</a></h3>
+          <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>RG</th>
+              <th>CPF</th>
+              <th>E-Mail</th>
+              <th>Cargo</th>
+              <th>Salário R$</th>
+            </tr>
+          </thead>
+          <tbody>
             {this.renderFuncionarios()}
-          </ul>
+          </tbody>
+          </table>
+      
         </div>
-        <div className="navbar navbar-fixed-bottom">
-          <button className="btn btn-success btn-block btn-lg" onClick={this.handleSubmit}>Finalizar</button>
-          <a className="btn btn-danger btn-block" href="http://localhost:3000/" role="button">Cancelar</a>
-        </div>
+        <a className="btn-lg btn-md btn btn-primary" href="http://localhost:3000/" role="button">
+            <span className="glyphicon glyphicon-circle-arrow-left"></span> Voltar</a>
       </div>
     )
   }
