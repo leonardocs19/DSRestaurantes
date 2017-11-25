@@ -46,6 +46,22 @@ class CrudItem extends Component {
   render() {
     return (
       <div className="container-fluid">
+        
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="http://localhost:3000">DS Restaurantes</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="http://localhost:3000">Home</a></li>
+            <li class="active"><a href="http://localhost:3000/item">Estoque</a></li>
+            <li><a href="http://localhost:3000/financa">Financeiro</a></li>
+            <li><a href="http://localhost:3000/funcionario">Funcionários</a></li>
+
+          </ul>
+        </div>
+        </nav>
+
         <header>
           <h1>Estoque <a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/item/ajuda" role="button">
             <span className="glyphicon glyphicon-info-sign"></span> Ajuda</a></h1>
@@ -54,8 +70,8 @@ class CrudItem extends Component {
           <form onSubmit={this.handleSubmit.bind(this)}> 
             <input className="form-control" type="text" ref="textInput" placeholder="Nome"/>
             <input className="form-control" type="text" ref="textInput2" placeholder="Quantidade"/>
-            <input className="form-control" type="text" ref="textInput3" placeholder="Data da compra - DD/MM/AAAA"/>
-            <input className="form-control" type="text" ref="textInput4" placeholder="Data do vencimento"/>
+            <input className="form-control" type="date" ref="textInput3" placeholder="Data da compra - DD/MM/AAAA"/>
+            <input className="form-control" type="date" ref="textInput4" placeholder="Data do vencimento"/>
             <input className="form-control" type="text" ref="textInput5" placeholder="Estoque minimo"/>
             <input className="btn btn-primary btn-block" type="submit" value="Adicionar Item ao Estoque" />
           </form>

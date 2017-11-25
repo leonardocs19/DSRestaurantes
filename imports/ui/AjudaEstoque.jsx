@@ -4,6 +4,22 @@ export default class App extends Component {
   render() {
     return (
       <div className="container-fluid">
+        
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="http://localhost:3000">DS Restaurantes</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="http://localhost:3000">Home</a></li>
+            <li class="active"><a href="http://localhost:3000/item">Estoque</a></li>
+            <li><a href="http://localhost:3000/financa">Financeiro</a></li>
+            <li><a href="http://localhost:3000/funcionario">Funcionários</a></li>
+
+          </ul>
+        </div>
+        </nav>
+
         <header>
           <h1><span className="glyphicon glyphicon-info-sign"></span> Ajuda - Gerenciador de Estoque</h1>
         </header>
@@ -29,7 +45,8 @@ export default class App extends Component {
           <div class="panel-body"><p>Os estoques cadastrados são visualizados logo abaixo da tela de cadastro</p></div>
         </div>
 
-        <a className="btn btn-primary btn-md" href="http://localhost:3000/item" role="button">Voltar</a>
+        <a className="btn btn-primary btn-md" href="http://localhost:3000/item" role="button">
+            <span className="glyphicon glyphicon-circle-arrow-left"></span> Voltar</a>
       </div>
     )
   }
