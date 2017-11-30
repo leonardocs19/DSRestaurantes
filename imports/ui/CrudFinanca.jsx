@@ -14,7 +14,7 @@ class CrudFinanca extends Component {
       valor: true,
       nome: true,
       data: true,
-      tipo: true,
+      NFe: true,
       aux: false
     };
   }
@@ -34,7 +34,7 @@ class CrudFinanca extends Component {
     const nome = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
     const valor = ReactDOM.findDOMNode(this.refs.textInput2).value.trim();
     const data = ReactDOM.findDOMNode(this.refs.textInput3).value.trim();
-    const tipo = ReactDOM.findDOMNode(this.refs.textInput4).value.trim();
+    const NFe = ReactDOM.findDOMNode(this.refs.textInput4).value.trim();
 
     if(nome.length > 0) 
       this.setState({nome: true});
@@ -46,26 +46,28 @@ class CrudFinanca extends Component {
     else
       this.setState({valor: false});
 
-    if(data > 0) 
+    /*if(data > 0) 
       this.setState({data: true});
     else
-      this.setState({data: false});
+      this.setState({data: false});*/
 
-    if(tipo.length > 0) {
-      this.setState({tipo: true});
+    if(NFe.length != 44) {
+      this.setState({NFe: true});
       this.setState({aux: true});
     }
-    else
-      this.setState({tipo: false});
+    else {
+      this.setState({NFe: false});
+    }
 
-  if(this.state.data && this.state.valor && this.state.nome && this.state.tipo && this.state.aux) {
+    if(this.state.data && this.state.valor && this.state.nome && this.state.NFe && this.state.aux) {
 
       Financas.insert({
         nome,
         valor,
         data,
-        tipo,
+        NFe,
       });
+  
 
 
       ReactDOM.findDOMNode(this.refs.textInput).value = '';
@@ -74,9 +76,9 @@ class CrudFinanca extends Component {
       ReactDOM.findDOMNode(this.refs.textInput4).value = '';
 
       this.setState({aux: false});
-
     }
   }
+  
 
   renderFinancas() {
     return this.props.financas.map((financa) => (
@@ -86,7 +88,7 @@ class CrudFinanca extends Component {
 
   render() {
 
-    let displayErrorTipo = this.state.tipo ? ' ': this.renderErrorMsg("Despesa") ;
+    let displayErrorNFe = this.state.NFe ? ' ': this.renderErrorMsg("Número de nota fiscal") ;
     let displayErrorValor = this.state.valor ? ' ': this.renderErrorMsg("Valor") ;
     let displayErrorNome = this.state.nome ? ' ': this.renderErrorMsg("Nome") ;
     let displayErrorData = this.state.data ? ' ': this.renderErrorMsg("Data") ;
@@ -110,29 +112,43 @@ class CrudFinanca extends Component {
         </nav>
 
         <header>
-          <h1>Finanças - Cadastro de Despesas</h1>
+          <h1>Finanças - Cadastro de Despesas <a className="btn-lg btn-md btn btn-info" href="http://localhost:3000/financa/ajuda" role="button">
+            <span className="glyphicon glyphicon-info-sign"></span> Ajuda</a></h1>
         </header>
         <div className="form-group">
           <form onSubmit={this.handleSubmit.bind(this)}> 
-            <input className="form-control" type="text" ref="textInput" placeholder="Nome"/>
+            <br/>
+            <input className="form-control" type="text" ref="textInput" placeholder="Nome *"/>
             {displayErrorNome}
-            <input className="form-control" type="number" ref="textInput2" placeholder="Valor"/>
+            <input className="form-control" type="number" ref="textInput2" placeholder="Valor *"/>
             {displayErrorValor}
-            <input className="form-control" type="date" ref="textInput3" placeholder="Data"/>
+            <input className="form-control" type="date" ref="textInput3" placeholder="Data *"/>
             {displayErrorData}
-            <input className="form-control" type="text" ref="textInput4" placeholder="Despesa"/>
-            {displayErrorTipo}
-            <input className="btn btn-primary btn-block" type="submit" value="Adicionar Finança" />
+            <input className="form-control" type="text" ref="textInput4" placeholder="00000000000000000000000000000000000000000000 (44 digítos) *"/>
+            {displayErrorNFe}
+            <input className="btn btn-primary btn-block" type="submit" value="Adicionar Despesa" />
+            <br/>
+            <p>Os campos com ' * ' são obrigatórios</p>
           </form>
-          <h3>Todos as Finanças</h3>
-          <ul className="list-group">
-            {this.renderFinancas()}
-          </ul>
+          <h3>Todos as Despesas <a className="btn-lg btn-md btn btn-primary" href="http://localhost:3000/financa/relatorio" role="button">
+            <span className="glyphicon glyphicon-list-alt"></span> Relatório</a> </h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>Nº Nota Fiscal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderFinancas()}
+            </tbody>
+          </table>
+          
         </div>
-        <div className="navbar navbar-fixed-bottom">
-          <button className="btn btn-success btn-block btn-lg" onClick={this.handleSubmit}>Finalizar</button>
-          <a className="btn btn-danger btn-block" href="http://localhost:3000/" role="button">Cancelar</a>
-        </div>
+        <a className="btn-lg btn-md btn btn-primary" href="http://localhost:3000/" role="button">
+            <span className="glyphicon glyphicon-circle-arrow-left"></span> Voltar</a>
       </div>
     )
   }
